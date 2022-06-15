@@ -1,24 +1,31 @@
 package br.com.entra21.beckend;
 
+import java.util.ArrayList;
+
 public class Informacoes {
 
 	public static void sobre() {
 
 		System.out.println("\n\t######################| SOBRE O GREEN BANK |######################\n");
 		System.out.println("O Green Bank surgiu a partir do Projeto Entra 21 - Java -> Turma do Prof. Oliota\n");
-		System.out.println("\t\t\tIntegrantes:\n");
-		System.out.println("\t- Arthur Estevan\n");
-		System.out.println("\t- Erick Gabriel\n");
-		System.out.println("\t- Rafael Macedo\n");
-		System.out.println("\t- Thabata Santos\n");
-		System.out.println("\n\t\t\tHistórico \n");
+	System.out.println("\t\t\tIntegrantes:\n");
+		
+		ArrayList<String> nomes = new ArrayList<>(); //TODO Java AvanÃ§ado - Lambda
+		nomes.add(new String("\tRafael")); 
+		nomes.add(new String("\tErick Gabriel"));
+		nomes.add(new String("\tArthur Estevan"));
+		nomes.add(new String("\tThabata Santos"));
+		nomes.sort(String::compareTo);
+		nomes.forEach(System.out::println);
+	
+		System.out.println("\n\t\t\tHistorico \n");
 		System.out.println("\tProjeto 1.0:\n ");
-		System.out.println("\tResumo - Implementação do Sistema com a geração de uma regra de negócio\n");
+		System.out.println("\tResumo - Implementaï¿½ï¿½o do Sistema com a geraï¿½ï¿½o de uma regra de negï¿½cio\n");
 		System.out.println("\t- Cadastro Admin\n");
 		System.out.println("\t- Cadastro Cliente\n");
-		System.out.println("\t- Regra de Negócio\n");
+		System.out.println("\t- Regra de Negï¿½cio\n");
 		System.out.println(
-				"\n\n ## Foram utilizado todos os tópicos e assuntos utilizandos até o momento dentro do curso de Java\n");
+				"\n\n ## Foram utilizado todos os tï¿½picos e assuntos utilizandos atï¿½ o momento dentro do curso de Java\n");
 		System.out.println("\n______________________________________________________________________________");
 	}
 

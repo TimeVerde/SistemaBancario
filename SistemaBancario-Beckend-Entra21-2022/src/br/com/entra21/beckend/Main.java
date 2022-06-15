@@ -19,16 +19,17 @@ public class Main {
 		
 		geradorConta_Data();
 				
-		byte option;
+		byte option; //TODO L贸gica - Variaveis
+		final byte ZERO = 0; //TODO L贸gica - Constante
 						
-		do {
+		do { //TODO L贸gica - do-while
 			
 			System.out.println(montarMenu());
-			System.out.print("\tEscolha uma op玢o: ");
+			System.out.print("\tEscolha uma opcao: ");
 			option = input.nextByte();
 			
-			switch(option) {
-			case 0:
+			switch(option) { //TODO L贸gica - Switch
+			case ZERO:
 				System.out.println("\n\tObrigado por usar o Green Bank, VOLTE SEMPRE!");
 				
 				break;
@@ -52,7 +53,7 @@ public class Main {
 
 				
 				default:
-					System.out.println("\n\tPor favor, insira um op玢o v醠ida");
+					System.out.println("\n\tPor favor, insira um op锟斤拷o v锟絣ida");
 					break;
 			}
 		}while(option!=0);

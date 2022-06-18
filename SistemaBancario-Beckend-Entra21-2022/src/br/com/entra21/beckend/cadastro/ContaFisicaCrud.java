@@ -5,16 +5,14 @@ import java.util.HashMap;
 
 import br.com.entra21.beckend.Armazenar;
 import br.com.entra21.beckend.Menu;
-import br.com.entra21.beckend.annotation.EstouImplementando;
 import br.com.entra21.beckend.modelos.Cliente;
 
-@EstouImplementando
 public class ContaFisicaCrud extends Menu implements ICrud<Cliente>{
 	
 	private HashMap<String, Cliente> lista = new Armazenar().clientes;
 	
 	public ContaFisicaCrud() {
-		super("CLIENTES ", opcoes);
+		super("CLIENTES", opcoes);
 	}
 	
 	@Override
@@ -44,45 +42,45 @@ public class ContaFisicaCrud extends Menu implements ICrud<Cliente>{
 			deletar(capturarChave());
 			break;
 		}
-		
-		
+			
 		return opcao;
 	}
 
-
 	@Override
 	public void listar(HashMap<String, Cliente> lista) {
-		System.out.println("\n\t_____________| Lista de" +getTitulo()+ " |_____________\n");
+		System.out.println("\n\t_____________| LISTA DE " +getTitulo()+ " |____________\n");
 		for (Cliente cliente : lista.values()) {
-			System.out.println("\t Nome: " +cliente.getNome()+ "\n"
-							  +"\t Endereço de Email: " +cliente.getEmail()+ "\n"
-							  +"\n\t____________________________________________________\n");
+			System.out.println("\t- Nome: " +cliente.getNome()+ "\n"
+							  +"\t- CPF: " +cliente.getCpf()+ "\n"
+							  +"\t______________________________________________\n");
 		}
-		System.out.println("\n\t_____________ Armazenado | "+lista.size()+" |_____________");
+		System.out.println("\t______________ Armazenado | "+lista.size()+" |_______________\n");
 	}
 
 	@Override
 	public void adicionar() {
 		Cliente novo = capturarValores();
+				
 		if(buscar(novo)==null) {
 			lista.put(novo.getNome(), novo);
 		} else {
-			System.out.println("\tCliente cadastrado com " +novo.getCpf()+ " inexistente");
+			System.out.println("\tCliente cadastrado com " +novo.getCpf()+ " existente");
 		}
 	}
 
 	@Override
 	public Cliente buscar(Cliente chave) {
-		return lista.get(chave.getNome());
+		return lista.get(chave.getCpf());
 	}
 
 	@Override
 	public void editar(Cliente chave) {
 		Cliente dadosBancario = buscar(chave);
+		
 		if(dadosBancario==null) {
-			System.out.println("\tCliente " +chave.getNome()+ " inexistente.");
+			System.out.println("\tCliente " +chave.getCpf()+ " inexistente.");
 		} else {
-			lista.put(chave.getNome(), capturarValores());
+			lista.put(chave.getCpf(), capturarValores());
 			System.out.println("\t-Dados Atualizados-");
 		}
 	}
@@ -91,9 +89,9 @@ public class ContaFisicaCrud extends Menu implements ICrud<Cliente>{
 	public void deletar(Cliente chave) {
 		Cliente dadosBancario = buscar(chave);
 		if(dadosBancario==null) {
-			System.out.println("\tCliente " +chave.getNome()+ " inexistente.");
+			System.out.println("\tCliente " +chave.getCpf()+ " inexistente.");
 		} else {
-			lista.remove(chave.getNome());
+			lista.remove(chave.getCpf());
 			System.out.println("\t-Cliente Excluido-");
 		}
 
@@ -102,9 +100,9 @@ public class ContaFisicaCrud extends Menu implements ICrud<Cliente>{
 	@Override
 	public Cliente capturarChave() {
 		Cliente informacoes = new Cliente();
-		System.out.print("\n\tInforme uma Pessoa CHAVE: ");
-		informacoes.setNome(super.getInput().nextLine());
-		informacoes.setNome(super.getInput().nextLine());
+		System.out.print("\n\tInforme CPF: ");
+		informacoes.setCpf(super.getInput().nextLine());
+		informacoes.setCpf(super.getInput().nextLine());
 		return informacoes;
 	}
 
@@ -160,9 +158,14 @@ public class ContaFisicaCrud extends Menu implements ICrud<Cliente>{
 		System.out.print("\tInforme o telefone: ");
 		informacoes.setTelefone(super.getInput().nextLine());
 		
-		LocalDate aberturaCliente = LocalDate.now();
-		informacoes.setDataCadastro(aberturaCliente);
+		LocalDate data = LocalDate.now();
 		
+		informacoes.setContaCorrente("1202644-1");
+		informacoes.setAgencia("7160");
+
+		informacoes.setDataAtualizacao(data);
+		informacoes.setDataCadastro(data);
+
 		System.out.println("\n\t_____________ | CADASTRAMENTO FINALIZADO |_____________\n");
 	
 		return informacoes;
@@ -178,6 +181,5 @@ public class ContaFisicaCrud extends Menu implements ICrud<Cliente>{
 		
 	}
 
-	
 }
 

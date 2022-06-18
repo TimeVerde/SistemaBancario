@@ -8,48 +8,34 @@ public class Empresa extends Pessoa {
 	private String cnpj;
 	private String inscricaoEstadual;
 	private LocalDate dataDeAbertura;
-	
+	private String senha;
+
 	public Empresa() {
 		super();
 	}
-	
+
 	public Empresa(String nome, String cpf, String rg, String dataNascimento, String sexo, String nomeMae,
 			String nomePai, String email, String cep, String endereco, String numero, String bairro, String cidade,
-			String estado, String telefone, String razaoSocial, String cnpj, String inscricaoEstadual, LocalDate dataDeAbertura) {
-		super(nome, cpf, rg, dataNascimento, sexo, nomeMae, nomePai, email, cep, endereco, numero, bairro, cidade, estado,
-				telefone);
+			String estado, String telefone, String razaoSocial, String cnpj, String inscricaoEstadual,
+			LocalDate dataDeAbertura, String senha, double saldo, String contaCorrente, String agencia) {
+		super(nome, cpf, rg, dataNascimento, sexo, nomeMae, nomePai, email, cep, endereco, numero, bairro, cidade,
+				estado, telefone, saldo, contaCorrente, agencia);
 		this.razaoSocial = razaoSocial;
 		this.cnpj = cnpj;
 		this.inscricaoEstadual = inscricaoEstadual;
 		this.dataDeAbertura = dataDeAbertura;
-	}	
+		this.senha = senha;
+	}
 
-	public Empresa(String razaoSocial, String cnpj, String inscricaoEstadual, LocalDate dataDeAbertura) {
+	public Empresa(String razaoSocial, String cnpj, String inscricaoEstadual, LocalDate dataDeAbertura, String senha) {
 		super();
 		this.razaoSocial = razaoSocial;
 		this.cnpj = cnpj;
 		this.inscricaoEstadual = inscricaoEstadual;
 		this.dataDeAbertura = dataDeAbertura;
+		this.senha = senha;
 	}
 
-	public Empresa(String razaoSocial) {
-		super();
-		this.razaoSocial = razaoSocial;
-	}
-	
-	public Empresa(String razaoSocial, String cnpj) {
-		super();
-		this.razaoSocial = razaoSocial;
-		this.cnpj = cnpj;
-	}
-	
-	public Empresa(String razaoSocial, String cnpj, String inscricaoEstadual) {
-		super();
-		this.razaoSocial = razaoSocial;
-		this.cnpj = cnpj;
-		this.inscricaoEstadual = inscricaoEstadual;
-	}
-	
 	public String getRazaoSocial() {
 		return razaoSocial;
 	}
@@ -82,6 +68,14 @@ public class Empresa extends Pessoa {
 		this.dataDeAbertura = dataDeAbertura;
 	}
 
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
 	@Override
 	public String toString() {
 		return "\n\t============= Informações do Cliente =============\n" +
@@ -102,9 +96,10 @@ public class Empresa extends Pessoa {
 			   "\t Razao Social: "+ getRazaoSocial() +"\n"+
 			   "\t CNPJ: "+ getCnpj() +"\n"+
 			   "\t Inscrição Estadual: "+ getInscricaoEstadual() +"\n"+
-			   "\t Data de Abertura: "+ getDataDeAbertura()+			   
-			   "\n\t=============================================";		
-
+			   "\t Data de Abertura: "+ getDataDeAbertura()+"\n"+
+			   "\t Conta Corrente: "+ getContaCorrente()+"\n"+
+			   "\t Agência: "+ getAgencia()+"\n"+
+			   "\t==================================================\n";		
 	}
 
 }

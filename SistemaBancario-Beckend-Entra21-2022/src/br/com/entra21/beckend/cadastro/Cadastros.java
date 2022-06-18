@@ -1,7 +1,6 @@
 package br.com.entra21.beckend.cadastro;
 
 import java.util.ArrayList;
-
 import br.com.entra21.beckend.Menu;
 
 public class Cadastros extends Menu {
@@ -23,11 +22,8 @@ public class Cadastros extends Menu {
 
 		case 3:
 			new ContaJuridicaCrud().executarMenu();
-			break;
-				
+			break;	
 		}
-
 		return opcao;
 	}
-
 }

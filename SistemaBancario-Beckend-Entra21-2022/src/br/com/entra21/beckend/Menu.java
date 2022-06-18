@@ -19,8 +19,8 @@ public class Menu {
 	public void executarMenu() {
 		do {
 			System.out.println("\n\t################| GREEN BANK " + this.titulo + "|################\n");
-			System.out.println("\t0 > | FECHAR APP |");
-			System.out.println("\t1 > | MENU PRINCIPAL |");
+			System.out.println("\t0 > | FECHAR APP");
+			System.out.println("\t1 > | MENU PRINCIPAL");
 
 			if (opcoes != null && !opcoes.isEmpty()) {
 				for (int contador = 0; contador < opcoes.size(); contador++) {

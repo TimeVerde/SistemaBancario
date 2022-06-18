@@ -44,43 +44,43 @@ public class ContaJuridicaCrud extends Menu implements ICrud<Empresa> {
 			break;
 
 		}
-		
 		return opcao;
 	}
 
 	@Override
 	public void listar(HashMap<String, Empresa> lista) {
-		System.out.println("\n\t################| Lista de" +getTitulo()+ " |################\n");
+		System.out.println("\n\t_____________| LISTA DE " +getTitulo()+ " |____________\n");
 		for (Empresa empresa : lista.values()) {
-			System.out.println("\t Empressa: " +empresa.getRazaoSocial()+ "\n"+
-							   "\t Proprietário: " +empresa.getNome()+ "\n"
-							  +"\n\t_____________________________________\n");
+			System.out.println("\t- Nome: " +empresa.getNome()+ "\n"
+							  +"\t- CNPJ: " +empresa.getCnpj()+ "\n"
+							  +"\t______________________________________________\n");
 		}
-		System.out.println("\n\t___________ Armazenado |"+lista.size()+" |___________");
+		System.out.println("\t______________ Armazenado | "+lista.size()+" |_______________\n");
 	}
 
 	@Override
 	public void adicionar() {
 		Empresa novo = capturarValores();
+		
 		if (novo == null) {
-			lista.put(novo.getNome(), novo);
+			lista.put(novo.getCnpj(), novo);
 		} else {
-			System.out.println("\tEmpresa cadastrada com " +novo.getCpf()+ " inexistente");
+			System.out.println("\tEmpresa cadastrada com " +novo.getCnpj()+ " existente");
 		}
 	}
 
 	@Override
 	public Empresa buscar(Empresa chave) {
-		return lista.get(chave.getNome());
+		return lista.get(chave.getCnpj());
 	}
 
 	@Override
 	public void editar(Empresa chave) {
 		Empresa dadosBancario = buscar(chave);
 		if(dadosBancario == null) {
-			System.out.println("\tEmpresa " +chave.getNome()+ " inexistente.");
+			System.out.println("\tEmpresa " +chave.getCnpj()+ " inexistente.");
 		} else {
-			lista.put(chave.getNome(), capturarValores());
+			lista.put(chave.getCnpj(), capturarValores());
 			System.out.println("\t-Dados Atualizados-");
 		}
 	}
@@ -89,9 +89,9 @@ public class ContaJuridicaCrud extends Menu implements ICrud<Empresa> {
 	public void deletar(Empresa chave) {
 		Empresa dadosBancario = buscar(chave);
 		if(dadosBancario == null) {
-			System.out.println("\tEmpresa " +chave.getNome()+ " inexistente.");
+			System.out.println("\tEmpresa " +chave.getCnpj()+ " inexistente.");
 		} else {
-			lista.remove(chave.getNome());
+			lista.remove(chave.getCnpj());
 			System.out.println("\t-Empresa Excluida-");
 		}
 	}
@@ -99,9 +99,9 @@ public class ContaJuridicaCrud extends Menu implements ICrud<Empresa> {
 	@Override
 	public Empresa capturarChave() {
 		Empresa informacoes = new Empresa();
-		System.out.print("\n\tInforme uma Empresa CHAVE: ");
-		informacoes.setNome(super.getInput().nextLine());
-		informacoes.setNome(super.getInput().nextLine());
+		System.out.print("\n\tInforme CNPJ: ");
+		informacoes.setCnpj(super.getInput().nextLine());
+		informacoes.setCnpj(super.getInput().nextLine());
 		return informacoes;
 
 	}
@@ -110,7 +110,7 @@ public class ContaJuridicaCrud extends Menu implements ICrud<Empresa> {
 	public Empresa capturarValores() {
 		Empresa informacoes = new Empresa();
 		
-		System.out.println("\n\t################| CADASTRAMENTO |################\n");
+		System.out.println("\n\t##################| CADASTRAMENTO |###################\n");
 		
 		System.out.print("\tInforme seu nome: "); 
 		informacoes.setNome(super.getInput().nextLine());
@@ -158,13 +158,17 @@ public class ContaJuridicaCrud extends Menu implements ICrud<Empresa> {
 		System.out.print("\tInforme a razão social: ");
 		informacoes.setRazaoSocial(super.getInput().nextLine());
 		
-		System.out.print("\tInforme a razão social: ");
-		informacoes.setRazaoSocial(super.getInput().nextLine());
-		
 		System.out.print("\tInforme CNPJ: ");
 		informacoes.setCnpj(super.getInput().nextLine());
 		
+		System.out.print("\tInforme Inscrição Estadual: ");
+		informacoes.setInscricaoEstadual(super.getInput().nextLine());
+		
 		LocalDate aberturaEmpresa = LocalDate.now();
+		
+		informacoes.setContaCorrente("1202644-1");
+		informacoes.setAgencia("7160");
+
 		informacoes.setDataDeAbertura(aberturaEmpresa);
 				
 		System.out.println("\n\t_______________| CADASTRAMENTO FINALIZADO |_______________\n");

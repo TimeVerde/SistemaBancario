@@ -1,106 +1,95 @@
 package br.com.entra21.beckend;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import br.com.entra21.beckend.annotation.EstouImplementando;
-
 public class Main {
 
 	private static Scanner input = new Scanner(System.in);
 	private static ArrayList<String> opcoes;
 
-	
-	@EstouImplementando
 	public static void main(String[] args) {
-		
+
 		geradorConta_Data();
-				
-		byte option; //TODO L贸gica - Variaveis
-		final byte ZERO = 0; //TODO L贸gica - Constante
-						
-		do { //TODO L贸gica - do-while
-			
+
+		Instant inicio = Instant.now();
+
+		byte option; // TODO L骻ica - Variaveis
+		final byte ZERO = 0; // TODO L骻ica - Constante
+
+		do { // TODO L骻ica - do-while
+
 			System.out.println(montarMenu());
 			System.out.print("\tEscolha uma opcao: ");
 			option = input.nextByte();
-			
-			switch(option) { //TODO L贸gica - Switch
+
+			switch (option) { // TODO L骻ica - Switch
+
 			case ZERO:
-				System.out.println("\n\tObrigado por usar o Green Bank, VOLTE SEMPRE!");
-				
+				System.out.println("\n\t- Obrigado por usar o Green Bank, VOLTE SEMPRE!");
 				break;
-				
+
 			case 1:
 				Principal.login();
 				break;
-				
+
 			case 2:
-				Principal.cadastrar();	
+				Principal.cadastrar();
 				break;
-				
+
 			case 3:
-				//Principal.alterarSenha();
+				// Principal.alterarSenha();
 				break;
-				
+
 			case 4:
 				Informacoes.sobre();
 				break;
 
-
-				
-				default:
-					System.out.println("\n\tPor favor, insira um op锟斤拷o v锟絣ida");
-					break;
+			default:
+				System.out.println("\n\t- Por favor, insira um op玢o v醠ida.");
+				break;
 			}
-		}while(option!=0);
-		
+		} while (option != 0);
+
+		Instant fim = Instant.now();
+
+		Duration duracao = Duration.between(inicio, fim);
+
+		System.out.println("\t______________________________________________\n");
+		System.out.println("\tMilisegundos Passado no Programa = " + duracao.toMillis());
+		System.out.println("\tSegundos Passado no Programa = " + duracao.toSeconds());
+		System.out.println("\tMinutos Passado no Programa = " + duracao.toMinutes());
+		System.out.println("\tHoras Passado no Programa = " + duracao.toHours());
+		System.out.println("\t______________________________________________");
 
 	}
-		
+
 	public static String montarMenu() {
-
 		if (opcoes == null) {
-			opcoes = new ArrayList<>(Arrays.asList("| FECHAR APP |", "| ENTRAR CONTA GREEN |", "| CADASTRAR CONTA GREEN |", "| ALTERAR SENHA |", "| SOBRE |"));
+			opcoes = new ArrayList<>(Arrays.asList("| FECHAR APP", "| ENTRAR CONTA GREEN", "| CADASTRAR CONTA GREEN", "| ALTERAR SENHA", "| SOBRE"));
 		}
-
 		String menu = "\n\t################| GREEN BANK |################\n";
 		for (int opcao = 0; opcao < opcoes.size(); opcao++) {
 			menu += "\n\t" + (opcao) + " > " + opcoes.get(opcao);
 		}
 		menu += "\n\t______________________________________________\n";
-
 		return menu;
-
 	}
-	
-//	public static void confirmandoLogin() {
-//		String nomeUsuario, senhaUsuario;
-//		do {			
-//			System.out.print("\tQual seu nome de usuario: ");
-//			nomeUsuario = input.next(); 
-//			
-//			System.out.print("\tQual sua senha: ");
-//			senhaUsuario = input.next();
-//			
-//		}while(!nomeUsuario.equals("Admin") && !senhaUsuario.equals("Admin"));
-//		System.out.println("\n\tAcesso Liberado");
-//	}
-	
-	
+
 	public static void geradorConta_Data() {
-		
+
 		LocalDate hoje = LocalDate.now();
 		DateTimeFormatter formatar = DateTimeFormatter.ofPattern("dd/MM/YYYY");
-		System.out.println("\n\tBem-Vindo seu acesso ocorreu no dia: "+formatar.format(hoje)+"\n");
-		
+		System.out.println("\n\t" + formatar.format(hoje));
+
 		Armazenar.gerarClientes();
 		Armazenar.gerarEmpresas();
 
 	}
-	
 
 }

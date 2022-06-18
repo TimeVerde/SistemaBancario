@@ -7,23 +7,18 @@ import java.util.Scanner;
 
 import br.com.entra21.beckend.Armazenar;
 import br.com.entra21.beckend.Menu;
-import br.com.entra21.beckend.annotation.EstouImplementando;
-import br.com.entra21.beckend.annotation.NaoEsquecerAmanha;
 import br.com.entra21.beckend.modelos.Cliente;
 
-public class MenuPrincipalPF extends Menu {
+public class MenuPrincipalPF extends Menu implements OperacoesBancarias  {
 
 	static Scanner input = new Scanner(System.in);
-
-	static HashMap<String, Cliente> transferenciaCliente = new Armazenar().clientes;
-	
-	static LocalDate datasOperacoes = LocalDate.now();
-
+	static HashMap<String, Cliente> clientes = new Armazenar().clientes;
+	static LocalDate dataOperacoes = LocalDate.now();
 	private Cliente cliente;
 	private double saldo;
 
 	public MenuPrincipalPF(String titulo, ArrayList<String> opcoes, Cliente cliente) {
-		super(titulo, opcoes);
+		super("CLIENTES DO BANCO", opcoes);
 		this.cliente = cliente;
 	}
 
@@ -35,30 +30,26 @@ public class MenuPrincipalPF extends Menu {
 		switch (opcao) {
 
 		case 2:
-			dadosBancarios();
+			dadosBancario();
 			break;
 
 		case 3:
-			deposito(realizarOperacoes());
+			deposito(capturandoValor());
 			break;
 
 		case 4:
-			sacar(realizarOperacoes());
+			sacar(capturandoValor());
 			break;
 
 		case 5:
-			transferencia(realizarOperacoes());
+			transferencia(capturandoValor());
 			break;
 
 		case 6:
-			pix();
+			investimento(capturandoValor());
 			break;
 
 		case 7:
-			investimentos();
-			break;
-
-		case 8:
 			saldo();
 			break;
 
@@ -67,35 +58,70 @@ public class MenuPrincipalPF extends Menu {
 		return opcao;
 	}
 
-	private void saldo() {
-		System.out.println("\tSaldo: " +this.saldo);
+	@Override
+	public void dadosBancario() {
+		System.out.println(cliente.toString());
+	}
+	
+	@Override
+	public void deposito(double pValor) {
+		System.out.println("\n\t___| REALIZANDO DEPÓSITO |___");
+		System.out.println("\t-Saldo Anterior: " + this.saldo);
+		this.saldo += pValor;
+		cliente.setSaldo(this.saldo);
+		System.out.println("\t-Saldo Posterior: " + this.saldo);
+		System.out.println("\t_______| Fim Deposito |______");
 	}
 
-	@EstouImplementando
-	private void investimentos() {
-
+	@Override
+	public void sacar(double pValor) {
+		System.out.println("\n\t___| REALIZANDO SAQUE |___");
+		System.out.println("\t-Saldo Anterior: " + this.saldo);
+		if (pValor <= this.saldo) {
+			this.saldo -= pValor;
+			cliente.setSaldo(this.saldo);
+		} else {
+			System.out.println("\t-Saldo Insuficente");
+		}
+		System.out.println("\t-Saldo Posterior: " + this.saldo);
+		System.out.println("\t_______| FIM SAQUE |______");
 	}
 
-	private void pix() {
-
-	}
-
-	@NaoEsquecerAmanha
-	private void transferencia(double pValor) {
+	@Override
+	public void transferencia(double pValor) {
 		System.out.println("\n\t____| REALIZANDO TRANSFERÊNCIA |____");
-		System.out.println("\n\t____| ....     aguarde    .... |____");
+		System.out.println("\n\t____| ....     aguarde    .... |____\n");
+		
+		System.out.println("\n\t_____________| LISTA DE " +getTitulo()+ " |_____________\n");
+		for (Cliente cliente : clientes.values()) {
+			System.out.println("\t Nome: " +cliente.getNome()+ "\n"
+							  +"\t CPF: " +cliente.getCpf()+ "\n"
+							  +"\t_______________________________________________________\n");
+		}
+
 		Cliente informacoes = new Cliente();
 
 		if (pValor <= this.saldo) {
 
-			System.out.print("\n\t-Informe CPF: ");
+			System.out.print("\t-Informe CPF: ");
 			informacoes.setNome(input.nextLine());
 			informacoes.setNome(input.nextLine());
-			if (transferenciaCliente.get(informacoes.getNome()) != null) {
+			if (clientes.get(informacoes.getNome()) != null) {
 				this.saldo -= pValor;
-				System.out.println("\t-Transferência Realizada com Sucesso");
-				System.out.println("\t-Data: " +datasOperacoes);
-				System.out.println("\t-CPF Destinatário: " +transferenciaCliente.get(informacoes.getNome()).getNome());
+				cliente.setSaldo(this.saldo);
+				clientes.get(informacoes.getNome()).setSaldo(pValor);
+				
+				System.out.println("\n\t-Transferência Realizada com Sucesso");
+				System.out.println("\t\t\t   -Data: " +dataOperacoes+ "\n");
+				
+				System.out.println("\t-Origem");
+				System.out.println("\t-Nome: " +cliente.getNome());
+				System.out.println("\t-Valor: " +pValor);
+				System.out.println("\t-CPF: " +cliente.getCpf()+ "\n");
+				
+				System.out.println("\t-Destinatário");
+				System.out.println("\t-Nome: " +clientes.get(informacoes.getNome()).getNome());
+				System.out.println("\t-CPF: " +clientes.get(informacoes.getNome()).getCpf()+ "\n");
 			}
 
 		} else {
@@ -103,43 +129,24 @@ public class MenuPrincipalPF extends Menu {
 		}
 		System.out.println("\t______| FIM TRANSFERÊNCIA |______");
 	}
-
-	private void sacar(double pValor) {
-		System.out.println("\n\t___| REALIZANDO SAQUE |___");
-		System.out.println("\t-Saldo Anterior: " + this.saldo);
-		if (pValor <= this.saldo) {
-			this.saldo -= pValor;
-		} else {
-			System.out.println("\t-Saldo Insuficente");
-		}
-		System.out.println("\t-Saldo Posterior: " + this.saldo);
-		System.out.println("\t______| FIM SAQUE |______");
-
+	
+	@Override
+	public void investimento(double pValor) {
+		
 	}
-
-	private void deposito(double pValor) {
-
-		System.out.println("\n\t___| REALIZANDO DEPÓSITO |___");
-		System.out.println("\t-Saldo Anterior: " + this.saldo);
-		this.saldo += pValor;
-		System.out.println("\t-Saldo Posterior: " + this.saldo);
-		System.out.println("\t______| Fim Deposito |______");
-
+	
+	@Override
+	public void saldo() {
+		System.out.println("\n\tSaldo: " +cliente.getSaldo());
+		
 	}
-
-	private void dadosBancarios() {
-		System.out.println(cliente.toString());
-	}
-
-	private static double realizarOperacoes() {
-
+	
+	@Override
+	public double capturandoValor() {
 		double pValor;
-
 		System.out.print("\n\tInforme o valor: ");
 		pValor = input.nextDouble();
-
 		return pValor;
-
 	}
 
 }

@@ -17,6 +17,9 @@ public class Pessoa {
 	private String cidade;
 	private String estado;
 	private String telefone;
+	private double saldo;
+	private String contaCorrente;
+	private String agencia;
 
 	public Pessoa() {
 		super();
@@ -24,7 +27,7 @@ public class Pessoa {
 
 	public Pessoa(String nome, String cpf, String rg, String dataNascimento, String sexo, String nomeMae,
 			String nomePai, String email, String cep, String endereco, String numero, String bairro, String cidade,
-			String estado, String telefone) {
+			String estado, String telefone, double saldo, String contaCorrente, String agencia) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
@@ -41,6 +44,9 @@ public class Pessoa {
 		this.cidade = cidade;
 		this.estado = estado;
 		this.telefone = telefone;
+		this.saldo = saldo;
+		this.contaCorrente = contaCorrente;
+		this.agencia = agencia;
 	}
 
 	public String getNome() {
@@ -163,4 +169,28 @@ public class Pessoa {
 		this.telefone = telefone;
 	}
 
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+	public String getContaCorrente() {
+		return contaCorrente;
+	}
+
+	public void setContaCorrente(String contaCorrente) {
+		this.contaCorrente = contaCorrente;
+	}
+
+	public String getAgencia() {
+		return agencia;
+	}
+
+	public void setAgencia(String agencia) {
+		this.agencia = agencia;
+	}
+	
 }

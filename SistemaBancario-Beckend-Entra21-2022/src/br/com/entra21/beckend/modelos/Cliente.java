@@ -14,19 +14,18 @@ public class Cliente extends Pessoa {
 		super();
 	}
 
-	
 	public Cliente(String nome, String cpf, String rg, String dataNascimento, String sexo, String nomeMae,
 			String nomePai, String email, String cep, String endereco, String numero, String bairro, String cidade,
-			String estado, String telefone, LocalDate dataCadastro, LocalDate dataAtualizacao, ArrayList<String> reclamacoes, String senha) {
-		super(nome, cpf, rg, dataNascimento, sexo, nomeMae, nomePai, email, cep, endereco, numero, bairro, cidade, estado,
-				telefone);
+			String estado, String telefone, LocalDate dataCadastro, LocalDate dataAtualizacao,
+			ArrayList<String> reclamacoes, String senha, double saldo, String contaCorrente, String agencia) {
+		super(nome, cpf, rg, dataNascimento, sexo, nomeMae, nomePai, email, cep, endereco, numero, bairro, cidade,
+				estado, telefone, saldo, contaCorrente, agencia);
 		this.dataCadastro = dataCadastro;
 		this.dataAtualizacao = dataAtualizacao;
 		this.reclamacoes = reclamacoes;
 		this.senha = senha;
 	}
 
-	
 	public Cliente(LocalDate dataCadastro, LocalDate dataAtualizacao, ArrayList<String> reclamacoes, String senha) {
 		super();
 		this.dataCadastro = dataCadastro;
@@ -34,47 +33,38 @@ public class Cliente extends Pessoa {
 		this.reclamacoes = reclamacoes;
 		this.senha = senha;
 	}
-	
-	
+
 	public LocalDate getDataCadastro() {
 		return dataCadastro;
 	}
-
 
 	public void setDataCadastro(LocalDate dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
 
-
 	public LocalDate getDataAtualizacao() {
 		return dataAtualizacao;
 	}
-
 
 	public void setDataAtualizacao(LocalDate dataAtualizacao) {
 		this.dataAtualizacao = dataAtualizacao;
 	}
 
-
 	public ArrayList<String> getReclamacoes() {
 		return reclamacoes;
 	}
 
-
 	public void setReclamacoes(ArrayList<String> reclamacoes) {
 		this.reclamacoes = reclamacoes;
 	}
-	
-	
+
 	public String getSenha() {
 		return senha;
 	}
 
-
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-
 
 	@Override
 	public String toString() {
@@ -94,7 +84,10 @@ public class Cliente extends Pessoa {
 			   "\t Cidade: "+ getCidade() +"\n"+
 			   "\t Estado: "+ getEstado() +"\n"+
 			   "\t Telefone: "+ getTelefone() +"\n"+
-			   "\t Comentário: "+ getReclamacoes() +
-			   "\n\t=============================================";
+			   "\t Conta Corrente: "+ getContaCorrente()+"\n"+
+			   "\t Agência: "+ getAgencia()+"\n"+
+			   "\t Data de Cadastro: "+ getDataCadastro()+"\n"+
+			   "\t Comentário: "+ getReclamacoes()+"\n"+
+			   "\t==================================================\n";
 	}
 }

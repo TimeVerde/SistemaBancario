@@ -1,8 +1,9 @@
 # Bank Account Project
 
-### First Version of the Project:
+>
+## First Version of the Project:
 
-> With only the knowledge learned, a project will be developed that involves all subjects and that will be maintained until the end of the course and > subsequent presentation to the evaluated board.
+>With only the knowledge learned, a project will be developed that involves all subjects and that will be maintained until the end of the course and > subsequent presentation to the evaluated board.
 >
 > To simulate teamwork, students will be divided into teams with four members, where each print the figures of the same team must be exchanged.
 >
@@ -11,7 +12,7 @@
 > Divide into smaller times to facilitate the management of each cell and practice teamwork.
 >
 > Each team will have 4 employees where activities will be internal strengths
-
+>
 <details>
   <summary><b>Portuguese 🗣️ </b></summary>
   
@@ -29,4 +30,104 @@
 </details>
 
 
-[Replit where we show the program in the future.](https://replit.com/~).
+## Tecnologia
+
+
+- IDE - ![Eclipse](https://img.shields.io/badge/-Eclipse-black?style=flat&logo=eclipse-ide&logoColor=orange)
+- Backend - ![Java](https://img.shields.io/badge/-Java-black?style=flat&logo=Java)&nbsp;
+- Replit - [Replit where we show the program in the future.](https://replit.com/~).
+
+## Equipe - 
+
+**Integrantes** **<span style="color:green">Time Verde</span>**:
+
+Número| Membro| Função | LinkedIn|
+------|---------|-------|-------|
+01| Thabata Santos|   Git|[<img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>](https://www.linkedin.com/in/thabatasantos/)|
+02| Arthur|   (CR)-UD UPDATE/DELETE|[<img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>](link linkedin)|
+03| Erick|   (CR)-UD READ/CREAT|[<img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>](link linkedin)|
+04| Rafel|   Main|[<img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>](https://www.linkedin.com/in/rafael-macedo-49801011a/)|
+||||
+
+
+## Conceitos Utilizados
+
+
+<details>	
+  <summary><b>💡&nbsp; Lógica de programação</b></summary>
+
+1. Git
+    - Repositório
+    - Documentação
+    - README.md
+    - Replit
+2. Organização do projeto
+    - Packages / sub-packages
+    - Nomenclatura
+3. Elementos básicos
+    - variáveis
+    - constantes
+    - comentários
+4. Estruturas de decisão
+    - if, else-if, else
+    - switch
+5. Laços de repetição
+    - for
+    - while
+    - do-while
+6. Modularização
+    - métodos com ou sem parâmetros e com ou sem retornos
+    - recursividade
+</details>
+
+<details>	
+  <summary><b>🗃️&nbsp; Orientação a objetos</b></summary>
+  
+1. Classes
+    - diagrama de classe
+    - atributos
+    - construtores
+    - encapsulamento
+    - métodos específicos
+    - instanciar objetos
+2. Herança
+    - extends
+    - criar novos construtores com base na super classe
+    - Polimorfismo
+        - Apenas aproveitar os métodos
+        - Fazer completamente de forma especifica
+        - Sobrescrever para:
+            - Fazer de forma especifica
+            - Aproveitar o comportamento e fazer um complemento
+3. Polimorfismo
+    - interfaces
+</details>
+
+<details>
+   <summary><b>⚠️&nbsp; Java avançado</b></summary>
+
+1. Classes wrapper
+2. ENUM
+3. Annotations
+4. Collections
+    - ArrayList
+    - LinkedList
+    - HashSet
+    - HashMap
+5. Funções Lambda
+6. Generics
+7. Dates
+8. Exceptions
+
+</details>
+
+</br>
+
+---
+
+### Fluxograma
+
+<a href="#"><img align="center" src="./Diagrama_Fluxograma/fluxograma.jpg" width="400 " height="300" /></a>
+
+### Diagrama de Classes
+

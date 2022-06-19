@@ -10,11 +10,11 @@ public class Informacoes {
 
 		System.out.println("\t\t ######################| SOBRE O GREEN BANK |######################\n");
 		
-		System.out.println("\n\t\t\t\t       Integrantes | Funções");
+		System.out.println("\n\t\t\t\t       Integrantes | Funcoes");
 		System.out.println("\t\t\t\t       ---------------------\n");
 
-		ArrayList<String> nomes = new ArrayList<>(); //TODO Java Avançado - Lambda
-		nomes.add(new String("\tThabata Santos - Git | Documentação"));
+		ArrayList<String> nomes = new ArrayList<>(); //TODO Java Avancado - Lambda
+		nomes.add(new String("\tThabata Santos - Git | Documentario"));
 		nomes.add(new String("\tRafael - Main | Menus")); 
 		nomes.add(new String("\tErick Gabriel - CR-(UD) Read | Creat"));
 		nomes.add(new String("\tArthur Estevan - CR-(UD) Update | Delete"));
@@ -25,9 +25,9 @@ public class Informacoes {
 		
 		System.out.println("\tO Green Bank surgiu a partir do Projeto Entra 21 - Java -> Turma do Prof. Oliota\n");
 
-		System.out.println("\tResumo - Implementação do Sistema com a geração de uma Regra de Negócios.");
+		System.out.println("\tResumo - Implementacao do Sistema com a geracao de uma Regra de Negocios.");
 		
-		System.out.println("\n\t## Foram utilizado todos os tópicos e assuntos dentro do curso de Java ##");
+		System.out.println("\n\t## Foram utilizado todos os topicos e assuntos dentro do curso de Java ##");
 		System.out.println("\t____________________________________________________________________________________\n");
 	}
 

@@ -26,13 +26,13 @@ public class Menu {
 				for (int contador = 0; contador < opcoes.size(); contador++) {
 					System.out.println("\t" + (contador + 2) + " > " + opcoes.get(contador));
 				}
-			} else {
-				System.out.println("Não há itens especificos para esse menu???");
+			} else { //TODO Logica - IF/ELSE
+				System.out.println("Nao ha itens especificos para esse menu???");
 			}
 			System.out.println("\t______________________________________________\n");
-			System.out.print("\tEscolha uma opção: ");
+			System.out.print("\tEscolha uma opcao: ");
 
-		} while (capturarOpcao() != 1);
+		} while (capturarOpcao() != 1); //TODO Logica - DO/WHILE
 	}
 
 	public byte capturarOpcao() {

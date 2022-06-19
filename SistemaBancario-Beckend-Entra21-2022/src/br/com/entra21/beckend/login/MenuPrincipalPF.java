@@ -18,7 +18,7 @@ public class MenuPrincipalPF extends Menu implements OperacoesBancarias  {
 	private double saldo;
 
 	public MenuPrincipalPF(String titulo, ArrayList<String> opcoes, Cliente cliente) {
-		super("CLIENTES DO BANCO", opcoes);
+		super("CLIENTES DO BANCO ", opcoes);
 		this.cliente = cliente;
 	}
 
@@ -65,7 +65,7 @@ public class MenuPrincipalPF extends Menu implements OperacoesBancarias  {
 	
 	@Override
 	public void deposito(double pValor) {
-		System.out.println("\n\t___| REALIZANDO DEPÓSITO |___");
+		System.out.println("\n\t___| REALIZANDO DEPOSITO |___");
 		System.out.println("\t-Saldo Anterior: " + this.saldo);
 		this.saldo += pValor;
 		cliente.setSaldo(this.saldo);
@@ -89,7 +89,7 @@ public class MenuPrincipalPF extends Menu implements OperacoesBancarias  {
 
 	@Override
 	public void transferencia(double pValor) {
-		System.out.println("\n\t____| REALIZANDO TRANSFERÊNCIA |____");
+		System.out.println("\n\t____| REALIZANDO TRANSFERENCIA |____");
 		System.out.println("\n\t____| ....     aguarde    .... |____\n");
 		
 		System.out.println("\n\t_____________| LISTA DE " +getTitulo()+ " |_____________\n");
@@ -111,7 +111,7 @@ public class MenuPrincipalPF extends Menu implements OperacoesBancarias  {
 				cliente.setSaldo(this.saldo);
 				clientes.get(informacoes.getNome()).setSaldo(pValor);
 				
-				System.out.println("\n\t-Transferência Realizada com Sucesso");
+				System.out.println("\n\t-Transferencia Realizada com Sucesso");
 				System.out.println("\t\t\t   -Data: " +dataOperacoes+ "\n");
 				
 				System.out.println("\t-Origem");
@@ -119,7 +119,7 @@ public class MenuPrincipalPF extends Menu implements OperacoesBancarias  {
 				System.out.println("\t-Valor: " +pValor);
 				System.out.println("\t-CPF: " +cliente.getCpf()+ "\n");
 				
-				System.out.println("\t-Destinatário");
+				System.out.println("\t-Destinatario");
 				System.out.println("\t-Nome: " +clientes.get(informacoes.getNome()).getNome());
 				System.out.println("\t-CPF: " +clientes.get(informacoes.getNome()).getCpf()+ "\n");
 			}
@@ -127,7 +127,7 @@ public class MenuPrincipalPF extends Menu implements OperacoesBancarias  {
 		} else {
 			System.out.println("\t-Saldo Insuficente");
 		}
-		System.out.println("\t______| FIM TRANSFERÊNCIA |______");
+		System.out.println("\t______| FIM TRANSFERENCIA |______");
 	}
 	
 	@Override

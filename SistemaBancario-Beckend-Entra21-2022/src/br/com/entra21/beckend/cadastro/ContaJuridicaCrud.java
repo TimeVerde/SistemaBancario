@@ -128,7 +128,7 @@ public class ContaJuridicaCrud extends Menu implements ICrud<Empresa> {
 		System.out.print("\tInforme o sexo: ");
 		informacoes.setSexo(super.getInput().nextLine());
 		
-		System.out.print("\tInforme nome da mãe: ");
+		System.out.print("\tInforme nome da mae: ");
 		informacoes.setNomeMae(super.getInput().nextLine());
 
 		System.out.print("\tInforme nome do pai: ");
@@ -137,7 +137,7 @@ public class ContaJuridicaCrud extends Menu implements ICrud<Empresa> {
 		System.out.print("\tInforme CEP: ");
 		informacoes.setCep(super.getInput().nextLine());
 
-		System.out.print("\tInforme o endereço: ");
+		System.out.print("\tInforme o endereco: ");
 		informacoes.setEndereco(super.getInput().nextLine());
 		
 		System.out.print("\tInforme o numero: ");
@@ -155,13 +155,13 @@ public class ContaJuridicaCrud extends Menu implements ICrud<Empresa> {
 		System.out.print("\tInforme o telefone: ");
 		informacoes.setTelefone(super.getInput().nextLine());
 		
-		System.out.print("\tInforme a razão social: ");
+		System.out.print("\tInforme a razao social: ");
 		informacoes.setRazaoSocial(super.getInput().nextLine());
 		
 		System.out.print("\tInforme CNPJ: ");
 		informacoes.setCnpj(super.getInput().nextLine());
 		
-		System.out.print("\tInforme Inscrição Estadual: ");
+		System.out.print("\tInforme Inscricao Estadual: ");
 		informacoes.setInscricaoEstadual(super.getInput().nextLine());
 		
 		LocalDate aberturaEmpresa = LocalDate.now();

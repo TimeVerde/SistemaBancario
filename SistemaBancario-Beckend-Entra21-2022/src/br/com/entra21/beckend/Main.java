@@ -19,16 +19,16 @@ public class Main {
 
 		Instant inicio = Instant.now();
 
-		byte option; // TODO Lógica - Variaveis
-		final byte ZERO = 0; // TODO Lógica - Constante
+		byte option; // TODO Logica - Variaveis
+		final byte ZERO = 0; // TODO Logica - Constante
 
-		do { // TODO Lógica - do-while
+		do { // TODO Logica - do-while
 
 			System.out.println(montarMenu());
 			System.out.print("\tEscolha uma opcao: ");
 			option = input.nextByte();
 
-			switch (option) { // TODO Lógica - Switch
+			switch (option) { // TODO Logica - Switch
 
 			case ZERO:
 				System.out.println("\n\t- Obrigado por usar o Green Bank, VOLTE SEMPRE!");
@@ -51,14 +51,14 @@ public class Main {
 				break;
 
 			default:
-				System.out.println("\n\t- Por favor, insira um opção válida.");
+				System.out.println("\n\t- Por favor, insira um opcao valida.");
 				break;
 			}
 		} while (option != 0);
 
 		Instant fim = Instant.now();
 
-		Duration duracao = Duration.between(inicio, fim);
+		Duration duracao = Duration.between(inicio, fim); //TODO Java Avancado - Dates
 
 		System.out.println("\t______________________________________________\n");
 		System.out.println("\tMilisegundos Passado no Programa = " + duracao.toMillis());
@@ -69,12 +69,12 @@ public class Main {
 
 	}
 
-	public static String montarMenu() {
-		if (opcoes == null) {
+	public static String montarMenu() { //TODO Logica - Modularizacao
+		if (opcoes == null) { //TODO Logica - IF
 			opcoes = new ArrayList<>(Arrays.asList("| FECHAR APP", "| ENTRAR CONTA GREEN", "| CADASTRAR CONTA GREEN", "| ALTERAR SENHA", "| SOBRE"));
 		}
 		String menu = "\n\t################| GREEN BANK |################\n";
-		for (int opcao = 0; opcao < opcoes.size(); opcao++) {
+		for (int opcao = 0; opcao < opcoes.size(); opcao++) { //TODO Logica - For
 			menu += "\n\t" + (opcao) + " > " + opcoes.get(opcao);
 		}
 		menu += "\n\t______________________________________________\n";
@@ -84,7 +84,7 @@ public class Main {
 	public static void geradorConta_Data() {
 
 		LocalDate hoje = LocalDate.now();
-		DateTimeFormatter formatar = DateTimeFormatter.ofPattern("dd/MM/YYYY");
+		DateTimeFormatter formatar = DateTimeFormatter.ofPattern("dd/MM/YYYY"); //TODO Java Avancado - Wrapper
 		System.out.println("\n\t" + formatar.format(hoje));
 
 		Armazenar.gerarClientes();

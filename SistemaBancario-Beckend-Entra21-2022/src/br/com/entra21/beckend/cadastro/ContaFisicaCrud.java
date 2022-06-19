@@ -7,9 +7,9 @@ import br.com.entra21.beckend.Armazenar;
 import br.com.entra21.beckend.Menu;
 import br.com.entra21.beckend.modelos.Cliente;
 
-public class ContaFisicaCrud extends Menu implements ICrud<Cliente>{
+public class ContaFisicaCrud extends Menu implements ICrud<Cliente>{ //TODO POO - Classes
 	
-	private HashMap<String, Cliente> lista = new Armazenar().clientes;
+	private HashMap<String, Cliente> lista = new Armazenar().clientes;//TODO Java Avancado - Collections
 	
 	public ContaFisicaCrud() {
 		super("CLIENTES", opcoes);
@@ -128,7 +128,7 @@ public class ContaFisicaCrud extends Menu implements ICrud<Cliente>{
 		System.out.print("\tInforme o sexo: ");
 		informacoes.setSexo(super.getInput().nextLine());
 		
-		System.out.print("\tInforme nome da mãe: ");
+		System.out.print("\tInforme nome da mae: ");
 		informacoes.setNomeMae(super.getInput().nextLine());
 
 		System.out.print("\tInforme nome do pai: ");
@@ -140,7 +140,7 @@ public class ContaFisicaCrud extends Menu implements ICrud<Cliente>{
 		System.out.print("\tInforme CEP: ");
 		informacoes.setCep(super.getInput().nextLine());
 
-		System.out.print("\tInforme o endereço: ");
+		System.out.print("\tInforme o endereco: ");
 		informacoes.setEndereco(super.getInput().nextLine());
 		
 		System.out.print("\tInforme o numero: ");

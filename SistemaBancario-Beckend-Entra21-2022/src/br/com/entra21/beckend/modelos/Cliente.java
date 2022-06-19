@@ -68,13 +68,13 @@ public class Cliente extends Pessoa {
 
 	@Override
 	public String toString() {
-		return "\n\t============= Informações do Cliente =============\n" +
+		return "\n\t============= Informacoes do Cliente =============\n" +
 			   "\t Nome: "+ super.getNome() +"\n"+
 			   "\t CPF: "+ super.getCpf() +"\n"+
 			   "\t RG: "+ super.getRg() +"\n"+
 			   "\t Data Nascimento: "+ super.getDataNascimento() +"\n"+	
 			   "\t Sexo: "+ super.getSexo() +"\n"+
-			   "\t Nome Mãe: "+ super.getNomeMae() +"\n"+
+			   "\t Nome Mae: "+ super.getNomeMae() +"\n"+
 			   "\t Nome Pai: "+ super.getNomePai() +"\n"+
 			   "\t Email: "+ getEmail() +"\n"+
 			   "\t Cep: "+ getCep() +"\n"+
@@ -85,9 +85,9 @@ public class Cliente extends Pessoa {
 			   "\t Estado: "+ getEstado() +"\n"+
 			   "\t Telefone: "+ getTelefone() +"\n"+
 			   "\t Conta Corrente: "+ getContaCorrente()+"\n"+
-			   "\t Agência: "+ getAgencia()+"\n"+
+			   "\t Agencia: "+ getAgencia()+"\n"+
 			   "\t Data de Cadastro: "+ getDataCadastro()+"\n"+
-			   "\t Comentário: "+ getReclamacoes()+"\n"+
+			   "\t Comentario: "+ getReclamacoes()+"\n"+
 			   "\t==================================================\n";
 	}
 }

@@ -30,81 +30,81 @@
 </details>
 
 
-## Tecnologia
+## Technology
 
 
 - IDE - ![Eclipse](https://img.shields.io/badge/-Eclipse-black?style=flat&logo=eclipse-ide&logoColor=orange)
 - Backend - ![Java](https://img.shields.io/badge/-Java-black?style=flat&logo=Java)&nbsp;
-- Replit - [Replit where we show the program in the future.](https://replit.com/~).
+- Replit - [Replit where we show the program in the future.](https://replit.com/~)
 
-## Equipe - 
+## Team - 
 
-**Integrantes** **<span style="color:green">Time Verde</span>**:
+**Members** **<span style="color:green">Team Green</span>**:
 
-Número| Membro| Função | LinkedIn|
+Number| Member| Occupation | LinkedIn|
 ------|---------|-------|-------|
 01| Thabata Santos|   Git|[<img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>](https://www.linkedin.com/in/thabatasantos/)|
-02| Arthur|   (CR)-UD UPDATE/DELETE|[<img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>](link linkedin)|
-03| Erick|   (CR)-UD READ/CREAT|[<img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>](link linkedin)|
-04| Rafel|   Main|[<img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>](https://www.linkedin.com/in/rafael-macedo-49801011a/)|
+02| Arthur|   (CR)-UD UPDATE/DELETE|[<img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>](https://www.linkedin.com/in/arthurestevanvargas)|
+03| Erick|   (CR)-UD READ/CREAT|[<img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>](https://www.linkedin.com/in/erick-gabriel-carvalho-da-silva-441277238)|
+04| Rafael|   Main|[<img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>](https://www.linkedin.com/in/rafael-macedo-49801011a/)|
 ||||
 
 
-## Conceitos Utilizados
+## Concepts Used
 
 
 <details>	
-  <summary><b>💡&nbsp; Lógica de programação</b></summary>
+  <summary><b>💡&nbsp; Programming Logic</b></summary>
 
 1. Git
-    - Repositório
-    - Documentação
+    - Repository
+    - Documentation
     - README.md
     - Replit
-2. Organização do projeto
+2. Project Organization
     - Packages / sub-packages
-    - Nomenclatura
-3. Elementos básicos
-    - variáveis
-    - constantes
-    - comentários
-4. Estruturas de decisão
+    - Nomenclature
+3. Basic Elements
+    - variables
+    - constants
+    - comments
+4. Decision Structures
     - if, else-if, else
     - switch
-5. Laços de repetição
+5. Repeat Loops
     - for
     - while
     - do-while
-6. Modularização
-    - métodos com ou sem parâmetros e com ou sem retornos
-    - recursividade
+6. Modularization
+    - methods with or without parameters and with or without returns
+    - recursion
 </details>
 
 <details>	
-  <summary><b>🗃️&nbsp; Orientação a objetos</b></summary>
+  <summary><b>🗃️&nbsp; Object Orientation</b></summary>
   
 1. Classes
-    - diagrama de classe
-    - atributos
-    - construtores
-    - encapsulamento
-    - métodos específicos
-    - instanciar objetos
-2. Herança
+    - class diagram
+    - attributes
+    - builders
+    - encapsulation
+    - specific methods
+    - instantiate objects
+2. Heritage
     - extends
-    - criar novos construtores com base na super classe
-    - Polimorfismo
-        - Apenas aproveitar os métodos
-        - Fazer completamente de forma especifica
-        - Sobrescrever para:
-            - Fazer de forma especifica
-            - Aproveitar o comportamento e fazer um complemento
+    - create new constructors based on the super class
+    - Polymorphism
+        - Just take advantage of the methods
+        - Do it completely specifically
+        - overwrite for:
+            - do it specifically
+            - Take advantage of the behavior and make a complement
 3. Polimorfismo
     - interfaces
 </details>
 
 <details>
-   <summary><b>⚠️&nbsp; Java avançado</b></summary>
+   <summary><b>⚠️&nbsp; Advanced java</b></summary>
 
 1. Classes wrapper
 2. ENUM
@@ -114,7 +114,7 @@ Número| Membro| Função | LinkedIn|
     - LinkedList
     - HashSet
     - HashMap
-5. Funções Lambda
+5. Lambda functions
 6. Generics
 7. Dates
 8. Exceptions
@@ -125,9 +125,10 @@ Número| Membro| Função | LinkedIn|
 
 ---
 
-### Fluxograma
+### Flowchart
 
 <a href="#"><img align="center" src="./Diagrama_Fluxograma/fluxograma.jpg" width="400 " height="300" /></a>
 
-### Diagrama de Classes
+### Class Diagram
 
+<a href="#"><img align="center" src="./Diagrama_Fluxograma/diagrama de clasess final.jpeg" width="400 " height="300" /></a>

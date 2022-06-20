@@ -48,7 +48,7 @@ public class MenuPrincipalPJ extends Menu implements OperacoesBancarias {
 			break;
 
 		case 6:
-			investimento(capturandoValor());
+			investimento();
 			break;
 
 		case 7:
@@ -56,7 +56,7 @@ public class MenuPrincipalPJ extends Menu implements OperacoesBancarias {
 			break;
 
 		default:
-			System.out.println("\n\tPor favor, insira um opcao valida");
+			System.out.println("\n\tPor favor, insira um opção válida");
 			break;
 		}
 
@@ -70,7 +70,7 @@ public class MenuPrincipalPJ extends Menu implements OperacoesBancarias {
 
 	@Override
 	public void deposito(double pValor) {
-		System.out.println("\n\t___| REALIZANDO DEPOSITO |___");
+		System.out.println("\n\t___| REALIZANDO DEPÓSITO |___");
 		System.out.println("\t-Saldo Anterior: " + this.saldo);
 		this.saldo += pValor;
 		empresa.setSaldo(this.saldo);
@@ -94,7 +94,7 @@ public class MenuPrincipalPJ extends Menu implements OperacoesBancarias {
 
 	@Override
 	public void transferencia(double pValor) {
-		System.out.println("\n\t____| REALIZANDO TRANSFERENCIA |____");
+		System.out.println("\n\t____| REALIZANDO TRANSFERÊNCIA |____");
 		System.out.println("\n\t____| ....     aguarde    .... |____\n");
 		
 		System.out.println("\n\t_____________| LISTA DE " +getTitulo()+ " |_____________\n");
@@ -118,7 +118,7 @@ public class MenuPrincipalPJ extends Menu implements OperacoesBancarias {
 				
 				empresas.get(informacoes.getNome()).setSaldo(pValor);
 				
-				System.out.println("\n\t-Transferencia Realizada com Sucesso");
+				System.out.println("\n\t-Transferência Realizada com Sucesso");
 				System.out.println("\t\t\t   -Data: " +dataOperacoes+ "\n");
 				
 				System.out.println("\t-Origem");
@@ -127,7 +127,7 @@ public class MenuPrincipalPJ extends Menu implements OperacoesBancarias {
 				System.out.println("\t-CPF: " +empresa.getCpf());
 				System.out.println("\t-CNPJ: " +empresa.getCnpj()+ "\n");
 				
-				System.out.println("\t-Destinatario");
+				System.out.println("\t-Destinatário");
 				System.out.println("\t-Nome: " +empresas.get(informacoes.getNome()).getNome());
 				System.out.println("\t-CPF: " +empresas.get(informacoes.getNome()).getCpf()+"\n");
 			}
@@ -135,11 +135,12 @@ public class MenuPrincipalPJ extends Menu implements OperacoesBancarias {
 		} else {
 			System.out.println("\t-Saldo Insuficente");
 		}
-		System.out.println("\t______| FIM TRANSFERENCIA |______");
+		System.out.println("\t______| FIM TRANSFERÊNCIA |______");
 	}
 
 	@Override
-	public void investimento(double pValor) {
+	public void investimento() {
+		System.out.println("\t-Sem Investimento para Empresas no Momento-");
 		
 	}
 
@@ -155,5 +156,6 @@ public class MenuPrincipalPJ extends Menu implements OperacoesBancarias {
 		pValor = input.nextDouble();
 		return pValor;
 	}
+
 
 }

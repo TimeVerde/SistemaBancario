@@ -1,5 +1,6 @@
 package br.com.entra21.beckend;
 
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,6 +9,7 @@ public class Menu {
 	private Scanner input;
 	private String titulo;
 	private ArrayList<String> opcoes;
+	static Instant start;
 
 	public Menu(String titulo, ArrayList<String> opcoes) {
 		super();
@@ -17,6 +19,7 @@ public class Menu {
 	}
 
 	public void executarMenu() {
+		start = Instant.now();
 		do {
 			System.out.println("\n\t################| GREEN BANK " + this.titulo + "|################\n");
 			System.out.println("\t0 > | FECHAR APP");
@@ -26,23 +29,26 @@ public class Menu {
 				for (int contador = 0; contador < opcoes.size(); contador++) {
 					System.out.println("\t" + (contador + 2) + " > " + opcoes.get(contador));
 				}
-			} else { //TODO Logica - IF/ELSE
-				System.out.println("Nao ha itens especificos para esse menu???");
+			} else {
+				System.out.println("Não há itens especificos para esse menu???");
 			}
 			System.out.println("\t______________________________________________\n");
-			System.out.print("\tEscolha uma opcao: ");
-
-		} while (capturarOpcao() != 1); //TODO Logica - DO/WHILE
+			System.out.print("\tEscolha uma opção: ");
+			
+		} while (capturarOpcao() != 1);
+		
+		
 	}
 
 	public byte capturarOpcao() {
 
 		byte opcao = input.nextByte();
-
+		
 		switch (opcao) {
 
 		case 0:
-			System.out.println("\n\tObrigado por usar o Green Bank, VOLTE SEMPRE!");
+			System.out.println("\n\t- Obrigado por usar o Green Bank, VOLTE SEMPRE!");
+			TempoNoPrograma.fim(start);
 			System.exit(0);
 			break;
 
@@ -50,9 +56,10 @@ public class Menu {
 			break;
 
 		}
+
 		return opcao;
 	}
-
+	
 	public String getTitulo() {
 		return titulo;
 	}

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
-public interface ICrud<T> { //TODO Java Avancado - Generics
+public interface ICrud<T> {
 	
 	ArrayList<String> opcoes = new ArrayList<String>(
 			Arrays.asList("| LISTAR", "| ADICIONAR", "| BUSCAR", "| EDITAR", "| DELETAR"));

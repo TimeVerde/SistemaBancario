@@ -8,7 +8,7 @@ import br.com.entra21.beckend.login.Login;
 
 public class Principal {
 	
-	public static void login() { //TODO Java Avancado - ArrayList
+	public static void login() {
 		new Login("LOGIN ", new ArrayList<String>(Arrays.asList("| ENTRAR CONTA PF", "| ENTRAR CONTA PJ"))).executarMenu();
 	}
 
@@ -17,7 +17,7 @@ public class Principal {
 	}
 
 //	public static void alterarSenha() {
-//		new MenuPrincipalPF("ALTERAï¿½ï¿½O", new ArrayList<String>(Arrays.asList("| ALTERAR SENHA CONTA PF |", "| ALTERAR SENHA CONTA PJ |"))).executarMenu();
+//		new MenuPrincipalPF("ALTERAÇÃO", new ArrayList<String>(Arrays.asList("| ALTERAR SENHA CONTA PF |", "| ALTERAR SENHA CONTA PJ |"))).executarMenu();
 //	}
 	
 }

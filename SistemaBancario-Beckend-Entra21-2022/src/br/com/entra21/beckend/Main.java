@@ -14,21 +14,22 @@ public class Main {
 	private static ArrayList<String> opcoes;
 
 	public static void main(String[] args) {
-
+		
+		Armazenar.gerarMassaTeste();
 		geradorConta_Data();
+		
+		Instant start = Instant.now();
 
-		Instant inicio = Instant.now();
+		byte option; // TODO Lógica - Variaveis
+		final byte ZERO = 0; // TODO Lógica - Constante
 
-		byte option; // TODO Logica - Variaveis
-		final byte ZERO = 0; // TODO Logica - Constante
-
-		do { // TODO Logica - do-while
+		do { // TODO Lógica - do-while
 
 			System.out.println(montarMenu());
 			System.out.print("\tEscolha uma opcao: ");
 			option = input.nextByte();
 
-			switch (option) { // TODO Logica - Switch
+			switch (option) { // TODO Lógica - Switch
 
 			case ZERO:
 				System.out.println("\n\t- Obrigado por usar o Green Bank, VOLTE SEMPRE!");
@@ -51,30 +52,21 @@ public class Main {
 				break;
 
 			default:
-				System.out.println("\n\t- Por favor, insira um opcao valida.");
+				System.out.println("\n\t- Por favor, insira um opção válida.");
 				break;
 			}
 		} while (option != 0);
-
-		Instant fim = Instant.now();
-
-		Duration duracao = Duration.between(inicio, fim); //TODO Java Avancado - Dates
-
-		System.out.println("\t______________________________________________\n");
-		System.out.println("\tMilisegundos Passado no Programa = " + duracao.toMillis());
-		System.out.println("\tSegundos Passado no Programa = " + duracao.toSeconds());
-		System.out.println("\tMinutos Passado no Programa = " + duracao.toMinutes());
-		System.out.println("\tHoras Passado no Programa = " + duracao.toHours());
-		System.out.println("\t______________________________________________");
+		
+		TempoNoPrograma.fim(start);
 
 	}
 
-	public static String montarMenu() { //TODO Logica - Modularizacao
-		if (opcoes == null) { //TODO Logica - IF
+	public static String montarMenu() {
+		if (opcoes == null) {
 			opcoes = new ArrayList<>(Arrays.asList("| FECHAR APP", "| ENTRAR CONTA GREEN", "| CADASTRAR CONTA GREEN", "| ALTERAR SENHA", "| SOBRE"));
 		}
 		String menu = "\n\t################| GREEN BANK |################\n";
-		for (int opcao = 0; opcao < opcoes.size(); opcao++) { //TODO Logica - For
+		for (int opcao = 0; opcao < opcoes.size(); opcao++) {
 			menu += "\n\t" + (opcao) + " > " + opcoes.get(opcao);
 		}
 		menu += "\n\t______________________________________________\n";
@@ -82,14 +74,8 @@ public class Main {
 	}
 
 	public static void geradorConta_Data() {
-
 		LocalDate hoje = LocalDate.now();
-		DateTimeFormatter formatar = DateTimeFormatter.ofPattern("dd/MM/YYYY"); //TODO Java Avancado - Wrapper
+		DateTimeFormatter formatar = DateTimeFormatter.ofPattern("dd/MM/YYYY");
 		System.out.println("\n\t" + formatar.format(hoje));
-
-		Armazenar.gerarClientes();
-		Armazenar.gerarEmpresas();
-
 	}
-
 }

@@ -3,7 +3,7 @@ package br.com.entra21.beckend.cadastro;
 import java.util.ArrayList;
 import br.com.entra21.beckend.Menu;
 
-public class Cadastros extends Menu { //TODO Java Avancado - Herança
+public class Cadastros extends Menu {
 
 	public Cadastros(String titulo, ArrayList<String> opcoes) {
 		super(titulo, opcoes);

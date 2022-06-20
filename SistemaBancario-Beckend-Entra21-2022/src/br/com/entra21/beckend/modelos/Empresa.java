@@ -78,13 +78,13 @@ public class Empresa extends Pessoa {
 
 	@Override
 	public String toString() {
-		return "\n\t============= Informacoes do Cliente =============\n" +
+		return "\n\t============= Informações do Cliente =============\n" +
 			   "\t Nome: "+ super.getNome() +"\n"+
 			   "\t CPF: "+ super.getCpf() +"\n"+
 			   "\t RG: "+ super.getRg() +"\n"+
 			   "\t Data Nascimento: "+ super.getDataNascimento() +"\n"+	
 			   "\t Sexo: "+ super.getSexo() +"\n"+
-			   "\t Nome Mae: "+ super.getNomeMae() +"\n"+
+			   "\t Nome Mãe: "+ super.getNomeMae() +"\n"+
 			   "\t Nome Pai: "+ super.getNomePai() +"\n"+
 			   "\t Cep: "+ getCep() +"\n"+
 			   "\t Endereco: "+ getEndereco() +"\n"+
@@ -95,10 +95,10 @@ public class Empresa extends Pessoa {
 			   "\t Telefone: "+ getTelefone() +"\n"+
 			   "\t Razao Social: "+ getRazaoSocial() +"\n"+
 			   "\t CNPJ: "+ getCnpj() +"\n"+
-			   "\t Inscricao Estadual: "+ getInscricaoEstadual() +"\n"+
+			   "\t Inscrição Estadual: "+ getInscricaoEstadual() +"\n"+
 			   "\t Data de Abertura: "+ getDataDeAbertura()+"\n"+
 			   "\t Conta Corrente: "+ getContaCorrente()+"\n"+
-			   "\t Agencia: "+ getAgencia()+"\n"+
+			   "\t Agência: "+ getAgencia()+"\n"+
 			   "\t==================================================\n";		
 	}
 

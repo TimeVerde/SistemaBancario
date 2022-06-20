@@ -10,7 +10,7 @@ public interface OperacoesBancarias {
 	
 	public void transferencia(double pValor);
 	
-	public void investimento(double pValor);
+	public void investimento();
 	
 	public void saldo();
 	

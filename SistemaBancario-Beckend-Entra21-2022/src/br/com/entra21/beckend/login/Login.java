@@ -6,9 +6,10 @@ import java.util.Arrays;
 import br.com.entra21.beckend.Menu;
 
 public class Login extends Menu {
+	
 
-	ArrayList<String> opcoes = new ArrayList<String>(Arrays.asList("| DADOS BANCARIOS", "| DEPOSITO", "| SACAR",
-			"| TRANSFERENCIA GREEN BANK","| INVESTIMENTOS", "| SALDO"));
+	ArrayList<String> opcoes = new ArrayList<String>(Arrays.asList("| DADOS BANCÁRIOS", "| DEPÓSITO", "| SACAR",
+			"| TRANSFERÊNCIA GREEN BANK","| INVESTIMENTOS", "| SALDO"));
 
 	public Login(String titulo, ArrayList<String> opcoes) {
 		super(titulo, opcoes);

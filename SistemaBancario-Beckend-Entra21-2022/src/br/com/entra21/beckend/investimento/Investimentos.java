@@ -2,6 +2,9 @@ package br.com.entra21.beckend.investimento;
 
 import java.time.LocalDate;
 
+import br.com.entra21.beckend.annotation.Informacao;
+
+@Informacao(value = "ENUM de Investimentos")
 public enum Investimentos {
 	
 	TESOURO_IPCA(3208.18, "IPCA + 5,30%", "15/08/2026"),

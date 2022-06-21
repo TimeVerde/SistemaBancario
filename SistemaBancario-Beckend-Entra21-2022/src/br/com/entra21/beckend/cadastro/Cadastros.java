@@ -2,7 +2,9 @@ package br.com.entra21.beckend.cadastro;
 
 import java.util.ArrayList;
 import br.com.entra21.beckend.Menu;
+import br.com.entra21.beckend.annotation.Informacao;
 
+@Informacao(value = "Chamada de Opções de Cadastro")
 public class Cadastros extends Menu {
 
 	public Cadastros(String titulo, ArrayList<String> opcoes) {

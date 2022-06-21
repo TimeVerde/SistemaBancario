@@ -4,6 +4,9 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import br.com.entra21.beckend.annotation.Informacao;
+
+@Informacao(value = "Gerador de Menus")
 public class Menu {
 
 	private Scanner input;
@@ -18,6 +21,7 @@ public class Menu {
 		this.opcoes = opcoes;
 	}
 
+	@Informacao(value = "Gera Menus Seguindo um Padrão")
 	public void executarMenu() {
 		start = Instant.now();
 		do {
@@ -40,6 +44,7 @@ public class Menu {
 		
 	}
 
+	@Informacao(value = "Captura Opção do Usuário")
 	public byte capturarOpcao() {
 
 		byte opcao = input.nextByte();

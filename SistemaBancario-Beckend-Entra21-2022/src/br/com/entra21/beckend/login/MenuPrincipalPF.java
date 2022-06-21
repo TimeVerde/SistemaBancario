@@ -7,9 +7,11 @@ import java.util.Scanner;
 
 import br.com.entra21.beckend.Armazenar;
 import br.com.entra21.beckend.Menu;
+import br.com.entra21.beckend.annotation.Informacao;
 import br.com.entra21.beckend.investimento.Investimentos;
 import br.com.entra21.beckend.modelos.Cliente;
 
+@Informacao(value = "Login de Contas Fisicas")
 public class MenuPrincipalPF extends Menu implements OperacoesBancarias  {
 
 	static Scanner input = new Scanner(System.in);
@@ -18,6 +20,7 @@ public class MenuPrincipalPF extends Menu implements OperacoesBancarias  {
 	private Cliente cliente;
 	private double saldo;
 
+	@Informacao(value = "Login de Contas Fisicas")
 	public MenuPrincipalPF(String titulo, ArrayList<String> opcoes, Cliente cliente) {
 		super("CLIENTES DO BANCO", opcoes);
 		this.cliente = cliente;
@@ -131,6 +134,7 @@ public class MenuPrincipalPF extends Menu implements OperacoesBancarias  {
 		System.out.println("\t______| FIM TRANSFERÊNCIA |______");
 	}
 	
+	@Deprecated
 	@Override
 	public void investimento() {
 

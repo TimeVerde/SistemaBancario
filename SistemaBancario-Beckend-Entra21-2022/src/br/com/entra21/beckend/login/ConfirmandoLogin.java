@@ -4,9 +4,16 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 import br.com.entra21.beckend.Armazenar;
+import br.com.entra21.beckend.annotation.Responsavel;
 import br.com.entra21.beckend.modelos.Cliente;
 import br.com.entra21.beckend.modelos.Empresa;
 
+
+@Responsavel (
+				ordemDePrioridade = Responsavel.OrdemDePrioridade.CRITICO,
+				toDo = "Atualizar método de Confirmação de Login",
+				responsavel = "Arthur"
+)
 public class ConfirmandoLogin {
 
 	static Scanner input = new Scanner(System.in);

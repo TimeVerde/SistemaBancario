@@ -1,6 +1,5 @@
 package br.com.entra21.beckend;
 
-import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -8,15 +7,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import br.com.entra21.beckend.annotation.Informacao;
+
 public class Main {
 
 	private static Scanner input = new Scanner(System.in);
 	private static ArrayList<String> opcoes;
 
+	
 	public static void main(String[] args) {
 		
 		Armazenar.gerarMassaTeste();
-		geradorConta_Data();
+		gerarData();
 		
 		Instant start = Instant.now();
 
@@ -42,13 +44,14 @@ public class Main {
 			case 2:
 				Principal.cadastrar();
 				break;
-
+				
 			case 3:
-				// Principal.alterarSenha();
+				// Estou Atualizando
+				Principal.alterarSenha();
 				break;
 
 			case 4:
-				Informacoes.sobre();
+				Principal.sobre();
 				break;
 
 			default:
@@ -58,7 +61,6 @@ public class Main {
 		} while (option != 0);
 		
 		TempoNoPrograma.fim(start);
-
 	}
 
 	public static String montarMenu() {
@@ -73,7 +75,8 @@ public class Main {
 		return menu;
 	}
 
-	public static void geradorConta_Data() {
+	@Informacao(value = "Gera Data Atual")
+	public static void gerarData() {
 		LocalDate hoje = LocalDate.now();
 		DateTimeFormatter formatar = DateTimeFormatter.ofPattern("dd/MM/YYYY");
 		System.out.println("\n\t" + formatar.format(hoje));

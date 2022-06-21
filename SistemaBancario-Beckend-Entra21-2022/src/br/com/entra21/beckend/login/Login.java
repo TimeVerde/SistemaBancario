@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import br.com.entra21.beckend.Menu;
+import br.com.entra21.beckend.annotation.Informacao;
 
+@Informacao(value = "Chamada de Opções de Login")
 public class Login extends Menu {
 	
 

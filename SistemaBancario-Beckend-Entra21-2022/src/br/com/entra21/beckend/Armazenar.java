@@ -5,14 +5,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
+import br.com.entra21.beckend.annotation.Informacao;
 import br.com.entra21.beckend.modelos.Cliente;
 import br.com.entra21.beckend.modelos.Empresa;
 
+@Informacao(value = "Armazena Dados de Clientes | Empresas")
 public class Armazenar {
 
 	public static HashMap<String, Cliente> clientes = new HashMap();
 	public static HashMap<String, Empresa> empresas = new HashMap();
 
+	@Informacao(value = "Gera Massa de Teste")
 	public static void gerarMassaTeste() {
 		
 		gerarClientes();
@@ -20,6 +23,7 @@ public class Armazenar {
 		
 	}
 	
+	@Informacao(value = "Banco de Dados de Clientes")
 	public static void gerarClientes() {
 
 		LocalDate dataCadastro = LocalDate.now();
@@ -59,6 +63,7 @@ public class Armazenar {
 
 	}
 
+	@Informacao(value = "Banco de Dados de Empresas")
 	public static void gerarEmpresas() {
 
 		LocalDate calebeBernardoInformáticaME = LocalDate.of(2017, 7, 23);

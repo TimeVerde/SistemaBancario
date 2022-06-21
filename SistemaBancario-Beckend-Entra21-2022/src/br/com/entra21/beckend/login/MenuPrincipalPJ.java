@@ -7,9 +7,11 @@ import java.util.Scanner;
 
 import br.com.entra21.beckend.Armazenar;
 import br.com.entra21.beckend.Menu;
+import br.com.entra21.beckend.annotation.Informacao;
 import br.com.entra21.beckend.modelos.Cliente;
 import br.com.entra21.beckend.modelos.Empresa;
 
+@Informacao(value = "Login de Contas Jurídica")
 public class MenuPrincipalPJ extends Menu implements OperacoesBancarias {
 	
 	static Scanner input = new Scanner(System.in);
@@ -18,7 +20,7 @@ public class MenuPrincipalPJ extends Menu implements OperacoesBancarias {
 	private Empresa empresa;
 	private double saldo;
 	
-
+	@Informacao(value = "Login de Contas Jurídica")
 	public MenuPrincipalPJ(String titulo, ArrayList<String> opcoes, Empresa empresa) {
 		super("EMPRESAS", opcoes);
 		this.empresa = empresa;

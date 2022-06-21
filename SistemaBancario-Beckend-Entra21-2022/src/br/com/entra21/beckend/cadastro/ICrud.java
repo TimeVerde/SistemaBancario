@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
+import br.com.entra21.beckend.annotation.Informacao;
+
+@Informacao(value = "ICRUD = CREAT | READ | UPDATE | DELETE ")
 public interface ICrud<T> {
 	
 	ArrayList<String> opcoes = new ArrayList<String>(

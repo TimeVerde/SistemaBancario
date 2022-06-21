@@ -5,15 +5,17 @@ import java.util.HashMap;
 
 import br.com.entra21.beckend.Armazenar;
 import br.com.entra21.beckend.Menu;
+import br.com.entra21.beckend.annotation.Informacao;
 import br.com.entra21.beckend.modelos.Empresa;
 
+@Informacao(value = "Cadastro de Contas Jurídica")
 public class ContaJuridicaCrud extends Menu implements ICrud<Empresa> {
 	
 	private HashMap<String, Empresa> lista = new Armazenar().empresas;
 	
+	@Informacao(value = "Cadastro de Contas Jurídica")
 	public ContaJuridicaCrud() {
 		super("EMPRESAS", opcoes);
-		
 	}
 
 	@Override

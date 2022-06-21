@@ -3,6 +3,9 @@ package br.com.entra21.beckend;
 import java.time.Duration;
 import java.time.Instant;
 
+import br.com.entra21.beckend.annotation.Informacao;
+
+@Informacao(value = "Tempo no Programa")
 public class TempoNoPrograma {
 		
 	public static void fim(Instant start) {

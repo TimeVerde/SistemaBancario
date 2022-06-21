@@ -1,5 +1,8 @@
 package br.com.entra21.beckend.login;
 
+import br.com.entra21.beckend.annotation.Informacao;
+
+@Informacao(value = "Métodos De Ações Bancárias")
 public interface OperacoesBancarias {
 	
 	public void dadosBancario();

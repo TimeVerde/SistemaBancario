@@ -5,12 +5,15 @@ import java.util.HashMap;
 
 import br.com.entra21.beckend.Armazenar;
 import br.com.entra21.beckend.Menu;
+import br.com.entra21.beckend.annotation.Informacao;
 import br.com.entra21.beckend.modelos.Cliente;
 
+@Informacao(value = "Cadastro de Contas Fisicas")
 public class ContaFisicaCrud extends Menu implements ICrud<Cliente>{
 	
 	private HashMap<String, Cliente> lista = new Armazenar().clientes;
 	
+	@Informacao(value = "Cadastro de Contas Fisicas")
 	public ContaFisicaCrud() {
 		super("CLIENTES", opcoes);
 	}
@@ -47,7 +50,7 @@ public class ContaFisicaCrud extends Menu implements ICrud<Cliente>{
 	}
 
 	@Override
-	public void listar(HashMap<String, Cliente> lista) {
+	public void listar(HashMap<String, Cliente> lista)  {
 		System.out.println("\n\t_____________| LISTA DE " +getTitulo()+ " |____________\n");
 		for (Cliente cliente : lista.values()) {
 			System.out.println("\t- Nome: " +cliente.getNome()+ "\n"

@@ -1,7 +1,7 @@
-# Bank Account Project
+# 💰 Bank Account Project 💰
 
 >
-## First Version of the Project:
+## 1️⃣ First Version of the Project:
 
 >With only the knowledge learned, a project will be developed that involves all subjects and that will be maintained until the end of the course and > subsequent presentation to the evaluated board.
 >
@@ -29,15 +29,23 @@
 > Cada equipe terá 4 integrantes onde as atividades serão divididas internamente
 </details>
 
+---
 
-## Technology
+##  🏦  Sobre o Projeto
 
+Sistema Bancário, onde temos as funcionalidades de um banco como por exemplo: cadastro de conta, login de conta, ações bancárias do dia a dia também implementação de uma regra de negócio, nesse caso utilizei investimento para resaltar essa parte. 
+
+---
+
+## ⚙️ Technology
 
 - IDE - ![Eclipse](https://img.shields.io/badge/-Eclipse-black?style=flat&logo=eclipse-ide&logoColor=orange)
 - Backend - ![Java](https://img.shields.io/badge/-Java-black?style=flat&logo=Java)&nbsp;
 - Replit - [Replit where we show the program in the future.](https://replit.com/~)
 
-## Team - 
+---
+
+## 👨‍🎓 👩‍🎓 👨‍🎓 👨‍🎓 Team  
 
 **Members** **<span style="color:green">Team Green</span>**:
 
@@ -47,10 +55,10 @@ Number| Member| Occupation | LinkedIn|
 02| Arthur|   (CR)-UD UPDATE/DELETE|[<img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>](https://www.linkedin.com/in/arthurestevanvargas)|
 03| Erick|   (CR)-UD READ/CREAT|[<img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>](https://www.linkedin.com/in/erick-gabriel-carvalho-da-silva-441277238)|
 04| Rafael|   Main|[<img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>](https://www.linkedin.com/in/rafael-macedo-49801011a/)|
-||||
 
+---
 
-## Concepts Used
+## 📚 Concepts Used 
 
 
 <details>	

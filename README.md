@@ -155,7 +155,7 @@ Number| Member| Occupation | LinkedIn|
 
 <details>
 <summary><b>&nbsp;👨‍💻 &nbsp;More</b></summary>
-<a href="#"><img align="center" src="./Diagrama_Fluxograma/fluxograma.jpg"/></a>
+<a href="#"><img align="center" src="https://github.com/TimeVerde/SistemaBancario/tree/main/Diagrama_Fluxograma"/></a>
   
 </details>
 
@@ -165,6 +165,6 @@ Number| Member| Occupation | LinkedIn|
 
 <details>
 <summary><b>&nbsp;👨‍💻 &nbsp;More</b></summary>
-<a href="#"><img align="center" src="./Diagrama_Fluxograma/diagrama de clasess final.jpeg"/></a>
+<a href="#"><img align="center" src="https://github.com/TimeVerde/SistemaBancario/tree/main/Diagrama_Fluxograma"/></a>
   
 </details>

@@ -42,7 +42,7 @@ public class AlterarSenha extends Menu {
 
 	public void contaFisica(Cliente cliente) {
 
-		try {
+		try { //TODO 03 - Java Avancado - Exceptions
 			String senha;
 
 			System.out.print("\n\t" + Armazenar.clientes.get(cliente.getCpf()).getNome() + " Informe a Senha: ");
@@ -60,7 +60,7 @@ public class AlterarSenha extends Menu {
 				if (senha1.equals(senha2)) {
 					Armazenar.clientes.get(cliente.getCpf()).setSenha(senha2);
 					System.out.println("\n\t-Senha Alterada com Sucesso-");
-				} else {
+				} else { //TODO 01 - Logica - IF/ELSE
 					System.out.println("\t-Senha Diferente Tente Novamente-");
 				}
 

@@ -7,10 +7,10 @@ import java.util.HashMap;
 import br.com.entra21.beckend.annotation.Informacao;
 
 @Informacao(value = "ICRUD = CREAT | READ | UPDATE | DELETE ")
-public interface ICrud<T> {
+public interface ICrud<T> { //TODO 03 - Java Avancado - Generics
 	
-	ArrayList<String> opcoes = new ArrayList<String>(
-			Arrays.asList("| LISTAR", "| ADICIONAR", "| BUSCAR", "| EDITAR", "| DELETAR"));
+	ArrayList<String> opcoes = new ArrayList<String>( //TODO 03 - Java Avancado - Collections
+			Arrays.asList("| LISTAR |", "| ADICIONAR |", "| BUSCAR |", "| EDITAR |", "| DELETAR |"));
 	
 	public void listar(HashMap<String,T> lista);
 

@@ -11,11 +11,11 @@ import br.com.entra21.beckend.modelos.Cliente;
 @Informacao(value = "Cadastro de Contas Fisicas")
 public class ContaFisicaCrud extends Menu implements ICrud<Cliente>{
 	
-	private HashMap<String, Cliente> lista = new Armazenar().clientes;
+	private HashMap<String, Cliente> lista = new Armazenar().clientes; //TODO 03 - Java Avancado - Collections
 	
 	@Informacao(value = "Cadastro de Contas Fisicas")
 	public ContaFisicaCrud() {
-		super("CLIENTES", opcoes);
+		super("CLIENTES", opcoes); // TODO 02 - POO - Heranca
 	}
 	
 	@Override
@@ -130,7 +130,7 @@ public class ContaFisicaCrud extends Menu implements ICrud<Cliente>{
 		System.out.print("\tInforme o sexo: ");
 		informacoes.setSexo(super.getInput().nextLine());
 		
-		System.out.print("\tInforme nome da m�e: ");
+		System.out.print("\tInforme nome da mae: ");
 		informacoes.setNomeMae(super.getInput().nextLine());
 
 		System.out.print("\tInforme nome do pai: ");
@@ -142,7 +142,7 @@ public class ContaFisicaCrud extends Menu implements ICrud<Cliente>{
 		System.out.print("\tInforme CEP: ");
 		informacoes.setCep(super.getInput().nextLine());
 
-		System.out.print("\tInforme o endere�o: ");
+		System.out.print("\tInforme o endereco: ");
 		informacoes.setEndereco(super.getInput().nextLine());
 		
 		System.out.print("\tInforme o numero: ");

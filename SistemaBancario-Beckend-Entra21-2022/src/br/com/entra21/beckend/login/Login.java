@@ -9,15 +9,15 @@ import br.com.entra21.beckend.annotation.Informacao;
 import br.com.entra21.beckend.cadastro.ContaFisicaCrud;
 import br.com.entra21.beckend.cadastro.ContaJuridicaCrud;
 
-@Informacao(value = "Chamada de Op��es de Login")
+@Informacao(value = "Chamada de Opcoes de Login")
 public class Login extends Menu {
 	
 	ContaFisicaCrud contaFisicaCrud = new ContaFisicaCrud();
 	
 	ContaJuridicaCrud contaJuridicaCrud = new ContaJuridicaCrud();
 
-	ArrayList<String> opcoes = new ArrayList<String>(Arrays.asList("| DADOS BANC�RIOS", "| DEP�SITO", "| SACAR",
-			"| TRANSFER�NCIA GREEN BANK","| INVESTIMENTOS", "| SALDO"));
+	ArrayList<String> opcoes = new ArrayList<String>(Arrays.asList("| DADOS BANCARIOS |", "| DEPOSITO |", "| SACAR |",
+			"| TRANSFERENCIA GREEN BANK |","| INVESTIMENTOS |", "| SALDO |"));
 
 	public Login(String titulo, ArrayList<String> opcoes) {
 		super(titulo, opcoes);

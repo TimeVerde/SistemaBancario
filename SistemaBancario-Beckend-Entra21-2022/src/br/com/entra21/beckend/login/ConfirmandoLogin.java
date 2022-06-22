@@ -34,7 +34,7 @@ public class ConfirmandoLogin {
 			return senhaClientes.get(informacoes.getCpf());
 		}
 
-		try {
+		try { //TODO 03 - Java Avancado - Exceptions
 
 			System.out.println("\n\t2/3");
 
@@ -70,7 +70,7 @@ public class ConfirmandoLogin {
 		return null;
 	}
 
-	public static Empresa buscarEmpresa() {
+	public static Empresa buscarEmpresa() { // TODO 02 - POO - Modularizacao
 
 		Empresa informacoes = new Empresa();
 

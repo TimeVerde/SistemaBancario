@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import br.com.entra21.beckend.Menu;
 import br.com.entra21.beckend.annotation.Informacao;
 
-@Informacao(value = "Chamada de Opções de Cadastro")
-public class Cadastros extends Menu {
+@Informacao(value = "Chamada de Opcoes de Cadastro") //TODO 03 - Java Avancado - Annotations
+public class Cadastros extends Menu { // TODO 02 - POO - HeranÃ§a
 
 	public Cadastros(String titulo, ArrayList<String> opcoes) {
 		super(titulo, opcoes);

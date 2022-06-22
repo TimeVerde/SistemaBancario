@@ -1,7 +1,7 @@
 package br.com.entra21.beckend.annotation;
 
 /**
- * Informações sobre o que o faz
+ * Informacoes sobre o que o faz
  */
 
 

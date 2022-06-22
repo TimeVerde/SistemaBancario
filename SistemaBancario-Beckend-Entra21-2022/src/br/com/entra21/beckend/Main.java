@@ -22,16 +22,16 @@ public class Main {
 		
 		Instant start = Instant.now();
 
-		byte option; // TODO Lógica - Variaveis
-		final byte ZERO = 0; // TODO Lógica - Constante
+		byte option; // TODO 01 - Logica - Variaveis
+		final byte ZERO = 0; // TODO 01 - Logica - Constante
 
-		do { // TODO Lógica - do-while
+		do { // TODO 01 Logica - do-while
 
 			System.out.println(montarMenu());
 			System.out.print("\tEscolha uma opcao: ");
 			option = input.nextByte();
 
-			switch (option) { // TODO Lógica - Switch
+			switch (option) { // TODO 01 - Logica - Switch
 
 			case ZERO:
 				System.out.println("\n\t- Obrigado por usar o Green Bank, VOLTE SEMPRE!");
@@ -46,7 +46,6 @@ public class Main {
 				break;
 				
 			case 3:
-				// Estou Atualizando
 				Principal.alterarSenha();
 				break;
 
@@ -55,7 +54,7 @@ public class Main {
 				break;
 
 			default:
-				System.out.println("\n\t- Por favor, insira um opção válida.");
+				System.out.println("\n\t- Por favor, insira um opcao valida.");
 				break;
 			}
 		} while (option != 0);
@@ -64,18 +63,18 @@ public class Main {
 	}
 
 	public static String montarMenu() {
-		if (opcoes == null) {
-			opcoes = new ArrayList<>(Arrays.asList("| FECHAR APP", "| ENTRAR CONTA GREEN", "| CADASTRAR CONTA GREEN", "| ALTERAR SENHA", "| SOBRE"));
+		if (opcoes == null) { //TODO 01 - Logica - IF
+			opcoes = new ArrayList<>(Arrays.asList("| FECHAR APP |", "| ENTRAR CONTA GREEN |", "| CADASTRAR CONTA GREEN |", "| ALTERAR SENHA |", "| SOBRE |"));
 		}
 		String menu = "\n\t################| GREEN BANK |################\n";
-		for (int opcao = 0; opcao < opcoes.size(); opcao++) {
+		for (int opcao = 0; opcao < opcoes.size(); opcao++) { //TODO 01 - Logica - For
 			menu += "\n\t" + (opcao) + " > " + opcoes.get(opcao);
 		}
 		menu += "\n\t______________________________________________\n";
 		return menu;
 	}
 
-	@Informacao(value = "Gera Data Atual")
+	@Informacao(value = "Gera Data Atual") //TODO 03 - Java Avancado - Dates
 	public static void gerarData() {
 		LocalDate hoje = LocalDate.now();
 		DateTimeFormatter formatar = DateTimeFormatter.ofPattern("dd/MM/YYYY");

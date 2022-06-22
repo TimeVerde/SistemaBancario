@@ -5,7 +5,7 @@ package br.com.entra21.beckend.annotation;
 * de desenvolvedores, onde pode-se
 * especificar a pessoa a quem se destina o item
 */
-public @interface Responsavel {
+public @interface Responsavel { // TODO 02 - POO - Interface
 		
 		public enum OrdemDePrioridade {
 			CRITICO, IMPORTANTE, TRIVIAL, DOCUMENTAR

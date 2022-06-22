@@ -21,30 +21,30 @@ public class Menu {
 		this.opcoes = opcoes;
 	}
 
-	@Informacao(value = "Gera Menus Seguindo um Padr�o")
+	@Informacao(value = "Gera Menus Seguindo um Padrao")
 	public void executarMenu() {
 		start = Instant.now();
-		do {
+		do { //TODO 01 - Logica - DO/WHILE
 			System.out.println("\n\t################| GREEN BANK " + this.titulo + "|################\n");
-			System.out.println("\t0 > | FECHAR APP");
-			System.out.println("\t1 > | MENU PRINCIPAL");
+			System.out.println("\t0 > | FECHAR APP |");
+			System.out.println("\t1 > | MENU PRINCIPAL |");
 
 			if (opcoes != null && !opcoes.isEmpty()) {
 				for (int contador = 0; contador < opcoes.size(); contador++) {
 					System.out.println("\t" + (contador + 2) + " > " + opcoes.get(contador));
 				}
 			} else {
-				System.out.println("N�o h� itens especificos para esse menu???");
+				System.out.println("Nao ha itens especificos para esse menu???");
 			}
 			System.out.println("\t______________________________________________\n");
-			System.out.print("\tEscolha uma op��o: ");
+			System.out.print("\tEscolha uma opcao: ");
 			
 		} while (capturarOpcao() != 1);
 		
 		
 	}
 
-	@Informacao(value = "Captura Op��o do Usu�rio")
+	@Informacao(value = "Captura Opcao do Usuario")
 	public byte capturarOpcao() {
 
 		byte opcao = input.nextByte();

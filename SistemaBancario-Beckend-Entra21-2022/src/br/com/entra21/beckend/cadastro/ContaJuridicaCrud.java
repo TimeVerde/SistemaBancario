@@ -8,12 +8,12 @@ import br.com.entra21.beckend.Menu;
 import br.com.entra21.beckend.annotation.Informacao;
 import br.com.entra21.beckend.modelos.Empresa;
 
-@Informacao(value = "Cadastro de Contas Jur�dica")
+@Informacao(value = "Cadastro de Contas Juridica")
 public class ContaJuridicaCrud extends Menu implements ICrud<Empresa> {
 	
 	private HashMap<String, Empresa> lista = new Armazenar().empresas;
 	
-	@Informacao(value = "Cadastro de Contas Jur�dica")
+	@Informacao(value = "Cadastro de Contas Juridica")
 	public ContaJuridicaCrud() {
 		super("EMPRESAS", opcoes);
 	}
@@ -129,7 +129,7 @@ public class ContaJuridicaCrud extends Menu implements ICrud<Empresa> {
 		System.out.print("\tInforme o sexo: ");
 		informacoes.setSexo(super.getInput().nextLine());
 		
-		System.out.print("\tInforme nome da m�e: ");
+		System.out.print("\tInforme nome da mae: ");
 		informacoes.setNomeMae(super.getInput().nextLine());
 
 		System.out.print("\tInforme nome do pai: ");
@@ -138,7 +138,7 @@ public class ContaJuridicaCrud extends Menu implements ICrud<Empresa> {
 		System.out.print("\tInforme CEP: ");
 		informacoes.setCep(super.getInput().nextLine());
 
-		System.out.print("\tInforme o endere�o: ");
+		System.out.print("\tInforme o endereco: ");
 		informacoes.setEndereco(super.getInput().nextLine());
 		
 		System.out.print("\tInforme o numero: ");
@@ -156,13 +156,13 @@ public class ContaJuridicaCrud extends Menu implements ICrud<Empresa> {
 		System.out.print("\tInforme o telefone: ");
 		informacoes.setTelefone(super.getInput().nextLine());
 		
-		System.out.print("\tInforme a raz�o social: ");
+		System.out.print("\tInforme a razao social: ");
 		informacoes.setRazaoSocial(super.getInput().nextLine());
 		
 		System.out.print("\tInforme CNPJ: ");
 		informacoes.setCnpj(super.getInput().nextLine());
 		
-		System.out.print("\tInforme Inscri��o Estadual: ");
+		System.out.print("\tInforme Inscricao Estadual: ");
 		informacoes.setInscricaoEstadual(super.getInput().nextLine());
 		
 		LocalDate aberturaEmpresa = LocalDate.now();

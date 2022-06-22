@@ -29,11 +29,26 @@
 > Cada equipe terá 4 integrantes onde as atividades serão divididas internamente
 </details>
 
+<br>
+
+---
+
+## 👨🏽‍🏫&nbsp; Instructions for execute the Project <a name="execute-project"></a>
+
+1. Make a project copy to your machine:
+    - git clone https://github.com/TimeVerde/SistemaBancario
+    - Or a direct download from the page [HERE](https://github.com/TimeVerde/SistemaBancario).
+    - Import the project into your IDE and execute the application.
+    
+    <br>
+    
 ---
 
 ##  🏦  Sobre o Projeto
 
 Sistema Bancário, onde temos as funcionalidades de um banco como por exemplo: cadastro de conta, login de conta, ações bancárias do dia a dia também implementação de uma regra de negócio, nesse caso utilizei investimento para resaltar essa parte. 
+
+<br>
 
 ---
 
@@ -42,6 +57,8 @@ Sistema Bancário, onde temos as funcionalidades de um banco como por exemplo: c
 - IDE - ![Eclipse](https://img.shields.io/badge/-Eclipse-black?style=flat&logo=eclipse-ide&logoColor=orange)
 - Backend - ![Java](https://img.shields.io/badge/-Java-black?style=flat&logo=Java)&nbsp;
 - Replit - [Replit where we show the program in the future.](https://replit.com/~)
+
+<br>
 
 ---
 
@@ -56,10 +73,11 @@ Number| Member| Occupation | LinkedIn|
 03| Erick|   (CR)-UD READ/CREAT|[<img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>](https://www.linkedin.com/in/erick-gabriel-carvalho-da-silva-441277238)|
 04| Rafael|   Main|[<img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>](https://www.linkedin.com/in/rafael-macedo-49801011a/)|
 
+<br>
+
 ---
 
 ## 📚 Concepts Used 
-
 
 <details>	
   <summary><b>💡&nbsp; Programming Logic</b></summary>
@@ -135,8 +153,18 @@ Number| Member| Occupation | LinkedIn|
 
 ### Flowchart
 
-<a href="#"><img align="center" src="./Diagrama_Fluxograma/fluxograma.jpg" width="400 " height="300" /></a>
+<details>
+<summary><b>&nbsp;👨‍💻 &nbsp;More</b></summary>
+<a href="#"><img align="center" src="./Diagrama_Fluxograma/fluxograma.jpg"/></a>
+  
+</details>
+
+---
 
 ### Class Diagram
 
-<a href="#"><img align="center" src="./Diagrama_Fluxograma/diagrama de clasess final.jpeg" width="400 " height="300" /></a>
+<details>
+<summary><b>&nbsp;👨‍💻 &nbsp;More</b></summary>
+<a href="#"><img align="center" src="./Diagrama_Fluxograma/diagrama de clasess final.jpeg"/></a>
+  
+</details>

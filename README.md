@@ -56,7 +56,6 @@ Sistema Bancário, onde temos as funcionalidades de um banco como por exemplo: c
 
 - IDE - ![Eclipse](https://img.shields.io/badge/-Eclipse-black?style=flat&logo=eclipse-ide&logoColor=orange)
 - Backend - ![Java](https://img.shields.io/badge/-Java-black?style=flat&logo=Java)&nbsp;
-- Replit - [Replit where we show the program in the future.](https://replit.com/~)
 
 <br>
 
